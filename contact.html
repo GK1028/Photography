@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: url('./project image/mainbanner.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .navbar {
+            position: absolute;
+            top: 20px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #f6f6fc;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .contact-container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+      .contact-left{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    
+      }
+     .contact-left-title h2{
+        font-weight: 600;
+        color: rgb(238, 237, 239);
+        font-size: 40px;
+        margin-bottom: 5px;
+
+     }
+
+     .contact-left-title hr{
+        border: none;
+        width: 120px;
+        height: 5px;
+        background-color: rgb(204, 2, 244);
+        border-radius: 20px;
+        margin-bottom: 10px;
+     }
+        
+     .contact-inputs{
+        border: none;
+        width: 400px;
+        height: 50px;
+        outline: none;
+        padding-left: 25px;
+        font-weight: 500;
+        color: black;
+        border-radius: 50px;
+
+     }
+    .contact-left textarea{
+        height: 140px;
+        padding-top: 15px;
+        border-radius: 20px;
+
+       
+     }
+
+     .contact-inputs:focus{
+        border: 2px solid #ff994f;
+     }
+
+     .contact-inputs::placeholder{
+        color: rgb(13, 13, 13);
+     }
+
+     .contact-left button{
+        display: flex;
+        align-items: center;
+        padding: 15px 30px;
+        font-size: 16px;
+        color: azure;
+        gap: 10px;
+        border: none;
+        border-radius: 50px;
+        background: linear-gradient(278deg,#4801f0,#fffdfe);
+
+     }
+
+     .contact-left button img{
+        height: 15px;
+
+     }
+
+     .contact-right img{
+        width: 500px;
+
+     }
+     @media (max-width:800px) {
+        .contact-inputs{
+            width: 80vw;
+
+        }
+        .contact-right{
+            display: none;
+        }
+     }
+
+    </style>
+    <link rel="icon" type="image/png" href="project image/23.png">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+        <a href="index.html"><img src="project image\logo.png" alt="Logo" width="50"></a></div>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+
+    </div>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2> Get in touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="ad174d83-2c5c-4526-8e59-960ac5588f65">
+            <input type="text" name="name" placeholder="YOUR NAME" class="contact-inputs" required>        
+            <input type="email" name="email" placeholder="YOUR EMAIL" class="contact-inputs" required> 
+            <input type="number" name="number" placeholder="Mobile Number" class="contact-inputs" required>
+            <input type="text" name="name" placeholder="Location" class="contact-inputs" required>
+            <textarea name="massage" placeholder="Your massage" class="contact-inputs" required></textarea>
+            <button type="submit">submit <img src ="project image\arrow_icon.png"alt=""></button>
+        </form>
+        <div class="contact-right">
+            <img src ="project image\23.png"alt="">
+        </div>
+    </div>
+      <!-- Footer -->
+      <div style="color: white; text-align: center; padding: 15px; position: absolute; bottom: 0; width: 100%;">
+        &copy; 2025. All Rights Reserved.
+    </div>
+
+</body>
+</html>
